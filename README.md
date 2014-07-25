@@ -51,7 +51,7 @@ bottom_link:
   google_plus: ##e.g. 104684175089936429154 for https://plus.google.com/u/0/104684175089936429154/posts
   github: ##e.g. ffff for https://github.com/ffff
   twitter: ##e.g. ffff for https://twitter.com/ffff
-  weibo: ##e.g. ffff for http://www.weibo.com/2316853071
+  weibo: ##e.g. 333333333 for http://www.weibo.com/333333333
   facebook: ##e.g. ffff for https://www.facebook.com/ffff
   renren: ##e.g. 333333333 for http://www.renren.com/333333333
 
