@@ -1,0 +1,93 @@
+#sidebar
+  width 270px
+  line-height 1.8em
+  @media screen and (max-width: 992px)
+    float none
+    width 100%
+  .widget
+    background #fff
+    margin-bottom 30px
+    word-wrap break-word
+    .title
+      padding-bottom 10px
+      border-bottom 2px solid #009CDC
+      margin-bottom 20px
+      font-size 1em
+      font-weight normal
+
+    .entry
+      font-size 0.9em
+      li
+        padding-bottom 10px
+        border-bottom 1px solid #eee
+        margin-bottom 10px
+
+    ul, ol, dl
+      list-style none
+      ul, ol, dl
+        list-style disc
+        margin-left 20px
+
+  .search
+    margin-bottom 30px
+    input
+      background #fff
+      font-family font-title
+      font-style italic
+      font-size 1em
+      padding 10px 15px
+      border 1px solid color-border
+      width 100%
+      box-sizing border-box
+      color color-meta
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      outline: none;
+      -webkit-transition: all 0.15s ease-in-out;
+      -moz-transition: all 0.15s ease-in-out;
+      &:focus
+        border-color: #00a8ed;
+        box-shadow: 0 0 5px #98e1ff;
+
+  .tag, .category
+    small
+      margin-left 5px
+      color color-meta
+      &:before
+        content '('
+      &:after
+        content ')'
+
+  .tag
+    a
+      margin-right 5px
+      padding 5px 7px
+      border 1px solid #eee
+      float left
+      display block
+      margin-bottom 5px
+      &:hover
+        background #eee
+        border-color color-border
+        text-decoration none
+
+  .twitter
+    li
+      border-bottom 1px solid color-border
+      padding 15px 20px
+      font-size 0.9em
+      &:last-of-type
+        border-bottom none
+    small
+      display block
+      margin-top 10px
+      color color-meta
+      line-height 1
+
+  .tagcloud
+    .entry
+      padding-right 5px
+    a
+      margin-right 10px
+      display inline-block
+

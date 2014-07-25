@@ -1,0 +1,73 @@
+*
+  margin 0
+  padding 0
+
+body
+  color color-font
+  font-family font-default
+  font-size 14px
+
+  @media screen and (max-width: 768px)
+    font-size 13px
+
+h1, h2, h3, h4, h5, h6
+  font-family font-title
+
+h1
+  font-size 1.8em
+
+h2
+  font-size 1.5em
+
+h3
+  font-size 1.3em
+
+.transition
+  -webkit-transition opacity 0.2s
+  -moz-transition opacity 0.2s
+  transition opacity 0.2s
+
+a
+  text-decoration none
+  color color-link
+  &:hover
+    text-decoration underline
+
+.alignleft
+  float left
+
+.alignright
+  float right
+
+.inner
+  width page-width
+  margin 0 auto
+  @media screen and (max-width: 1200px)
+    width 100%
+
+.padding
+  @media screen and (max-width: 1200px)
+    padding 0 20px
+
+#main-col
+  width 900px
+  @media screen and (max-width: 1200px)
+    width 100%
+    margin-right -300px
+  @media screen and (max-width: 992px)
+    margin-right 0
+    float none
+
+#wrapper
+  @media screen and (max-width: 1200px)
+    margin-right 300px
+  @media screen and (max-width: 992px)
+    margin-right 0
+
+
+.clearfix
+  &:before, &:after
+    display table
+    content ""
+  &:after
+    clear both

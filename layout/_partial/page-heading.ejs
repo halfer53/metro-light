@@ -1,0 +1,40 @@
+<div id="page-heading-wrap">
+  	<div class="inner">
+      <div class="padding">
+    		<% if (page.layout == 'post') { %>
+          <h1><%= page.title %></h1>
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="<%= page.date.toDate().toISOString() %>"><%= page.date.format(config.date_format) %></time>
+            </li>
+            <% if (config.author){ %>
+              <li>
+                <span class="heading-span">By: </span>
+
+                <% if (theme.personal_site){ %>
+                  <a href="<%= theme.personal_site %>" target="_blank"><%= config.author %></a>
+
+                <% } else { %>
+                  <a href="/"><%= config.author %></a>
+                <% } %>
+
+              </li>
+            <% } %>
+            <li>
+              <span class="heading-span">With: </span>
+              <% if(config.disqus_shortname && !theme.comment.duoshuo) { %>
+                <a href="#disqus_thread">Comments</a>
+
+              <% } else if(theme.comment.duoshuo && theme.comment.duoshuo_short_name) { %>
+
+                <a href="#ds-thread"><span class="ds-thread-count" data-thread-key="<%- page.path %>" data-count-type="comments"></span>Comments</a>
+              <% } %>
+            </li>
+          </ul>
+        <% } else { %>
+          <h2><% if (config.subtitle){ %><%= config.subtitle %><% } %></h2>
+        <% } %>
+      </div>
+  	</div>
+  </div>

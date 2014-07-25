@@ -1,0 +1,37 @@
+<div class="padding">
+	<div class="alignleft">
+	  <% if (config.author){ %>
+	  &copy; <%= new Date().getFullYear() %> <%= config.author %>
+	  <% } else { %>
+	  &copy; <%= new Date().getFullYear() %> <%= config.title %>
+	  <% } %>
+	  Powerd by <a href="http://hexo.io/" target="_blank">hexo</a>
+	  and Theme by <a href="https://github.com/halfer53/metro-light" target="_blank">metro-light</a>
+	</div>
+
+	<div class="alignright">
+		<% if (theme.bottom_link.google_plus){ %>
+			<a href="https://plus.google.com/u/0/<%- theme.bottom_link.google_lus %>/posts" target="_blank title="bruce tan google plus"><i class="fa fa-google-plus-square"></i></a>
+		<% } %>
+		<% if (theme.bottom_link.github){ %>
+			<a href="https://github.com/<%- theme.bottom_link.github %>" target="_blank" title="halfer53 github"><i class="fa fa-github-square"></i></a>	
+		<% } %>
+		<% if (theme.bottom_link.twitter){ %>
+			<a href="https://twitter.com/<%- theme.bottom_link.twitter %>" target="_blank" title="halfer53 github"><i class="fa fa-twitter-square"></i></a>	
+		<% } %>
+		<% if (theme.bottom_link.weibo){ %>
+			<a href="http://weibo.com/<%- theme.bottom_link.weibo %>" target="_blank" title="halfer53 github"><i class="fa fa-weibo"></i></a>	
+		<% } %>
+		<% if (theme.bottom_link.facebook){ %>
+			<a href="https://www.facebook.com/<%- theme.bottom_link.facebook %>" target="_blank" title="halfer53 github"><i class="fa fa-facebook-square"></i></a>	
+		<% } %>
+		<% if (theme.bottom_link.renren){ %>
+			<a href="http://www.renren.com/<%- theme.bottom_link.renren %>" target="_blank" title="halfer53 github"><i class="fa fa-renren"></i></a>	
+		<% } %>
+		<% if (theme.rss){ %>
+			<a href="<%- theme.rss %>" target="_blank" title="bruce tan blog rss"><i class="fa fa-rss-square"></i></a>
+		<% } %>
+	</div>
+
+	<div class="clearfix"></div>
+</div>

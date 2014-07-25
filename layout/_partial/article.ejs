@@ -1,0 +1,70 @@
+<article class="<%= item.layout %>">
+  <% if (item.photos && item.photos.length){ %>
+    <%- partial('post/gallery') %>
+  <% } %>
+  <% if(index) { %>
+    <div class="post-content-index">
+  <% } else { %>
+    <div class="post-content">
+  <% } %>
+      <% if (index) { %>
+        <header>
+          <div class="icon"></div>
+          <%- partial('post/title') %>
+          <ul>
+            <li>
+              <span class="heading-span">Posted on: </span>
+              <time datetime="<%= item.date.toDate().toISOString() %>"><%= item.date.format(config.date_format) %></time>
+            </li>
+            <% if (config.author){ %>
+              <li>
+                <span class="heading-span">By: </span>
+
+                <% if (theme.personal_site){ %>
+                  <a href="<%= theme.personal_site %>" target="_blank"><%= config.author %></a>
+
+                <% } else { %>
+                  <a href="/"><%= config.author %></a>
+                <% } %>
+
+              </li>
+            <% } %>
+            <li>
+              <span class="heading-span">With: </span>
+              <% if(config.disqus_shortname && !theme.comment.duoshuo) { %>
+                <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+              <% } else if(theme.comment.duoshuo && theme.comment.duoshuo_short_name) { %>
+
+                <a href="<%- config.root %><%- item.path %>#ds-thread"><span class="ds-thread-count" data-thread-key="<%- item.path %>" data-count-type="comments"></span>Comments</a>
+              <% } %>
+          </ul>
+        </header>
+      <% } %>
+      <div class="entry">
+        <% if (index){ %>
+          <% if (item.excerpt){ %>
+            <%- item.excerpt %>
+          <% } else { %>
+            <%= strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 800) %>
+          <% } %>
+        <% } else { %>
+          <%- item.content %>
+        <% } %>
+      </div>
+      <footer>
+        <% if (index){ %>
+          <div class="alignright">
+            <a href="<%- config.root %><%- item.path %>#more" class="more-link"><%= theme.excerpt_link %><i class="fa fa-long-arrow-right fa-1"></i></a>
+          </div>
+        <% } else { %>
+          <%- partial('post/category') %>
+          <%- partial('post/tag') %>
+          <%- partial('post/share') %>
+        <% } %>
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+</article>
+
+<%- partial('comment') %>

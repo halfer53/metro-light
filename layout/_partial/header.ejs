@@ -1,0 +1,18 @@
+<div class="padding">
+	<div class="alignleft logo">
+	  <h1><a href="<%- config.root %>"><%= config.title %></a></h1>
+	</div>
+	<nav id="main-nav" class="alignright">
+		<input type="checkbox" id="toggle" />
+		<label for="toggle" class="toggle" data-open="Main Menu" data-close="Close Menu" onclick><i class="fa fa-bars"></i></label>
+	  <ul class="menu">
+	    <% for (var i in theme.menu){ %>
+	      <li><a href="<%- theme.menu[i] %>"><%= i %></a></li>
+	    <% } %>
+	    <% if (theme.rss){ %>
+	    	<li><a href="<%= theme.rss %>" target="_blank" title="bruce tan blog rss" class="rss-top"><i class="fa fa-rss"></i></a></li>
+	    <% } %>
+	  </ul>
+	</nav>
+	<div class="clearfix"></div>
+</div>

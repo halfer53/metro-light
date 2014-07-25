@@ -1,0 +1,32 @@
+<% if (page.comments){ %>
+<section id="comment">
+  <h2 class="title"><%= __('comment') %></h2>
+
+  <% if(config.disqus_shortname && !theme.comment.duoshuo) { %>
+
+  <div id="disqus_thread"></div>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  <% } else if(theme.comment.duoshuo && theme.comment.duoshuo_short_name) { %>
+
+     <!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="<%- item.path %>" data-title="<%= item.title %>" data-url="<%- config.url %><%- item.path %>"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"<%= theme.comment.duoshuo_short_name %>"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+  <% } %>
+</section>
+<% } %>
