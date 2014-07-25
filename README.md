@@ -1,21 +1,21 @@
 metro-light
 ===========
 
-Metro-light is a flat and responsive theme for [Hexo](http://zespia.tw/hexo/), it is developed based on light
+Metro-light is inspired by Win 8, Metro-Light a flat, minimal and responsive theme for [Hexo](http://zespia.tw/hexo/), it is developed based on light
 
 [Demo](http://halfer53.github.io)
 
 ##Installation
 ###Install
 ```
-$ git clone https://github.com/halfer53/metro-light.git themes/pacman
+$ git clone https://github.com/halfer53/metro-light.git themes/metro-light
 ```
 **Metro-light requires Hexo 2.4.5 and above.** 
 ###Enable
-Modify `theme` setting in blog folder` _config.yml` to `pacman`.
+Modify `theme` setting in blog folder` _config.yml` to `metro-light`.
 ###Update
 ```
-cd themes/pacman
+cd themes/metro-light
 git pull
 ```
 **please backup your `_config.yml` file before update.** 
