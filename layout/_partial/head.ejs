@@ -52,7 +52,7 @@
     <link rel="apple-touch-icon" href="<%- config.root %><%- theme.logo.apple_icon %>">
     <link rel="apple-touch-icon-precomposed" href="<%- config.root %><%- theme.logo.apple_icon %>">
     <% } %>
-    
+
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
 
@@ -82,6 +82,20 @@ body{ -webkit-animation: bugfix infinite 1s; }
   <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
   <% } %>
 
+<script type="text/javascript">
+$(window).scroll(function() {
 
+    if($(this).scrollTop() > 400) {
+        $('.scroll-top').fadeIn(200);
+    } else {
+        $('.scroll-top').fadeOut(200);
+    }
+});
+
+$('.scroll-top').bind('click', function(e) {
+    e.preventDefault();
+    $('body,html').animate({scrollTop:0},200);
+});
+</script>
 
 </head>
