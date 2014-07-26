@@ -21,7 +21,7 @@ share:
   enable: true
   jiathis: false ##a chinese sharing plugins for chinese users
   twitter: true
-  google: true
+  google: true.
 
 bottom_link:
   google_plus: ##e.g. 104684175089936429154 for https://plus.google.com/u/0/104684175089936429154/posts
@@ -30,6 +30,11 @@ bottom_link:
   weibo: ##e.g. ffff for http://www.weibo.com/2316853071
   facebook: ##e.g. ffff for https://www.facebook.com/ffff
   renren: ##e.g. 333333333 for http://www.renren.com/333333333
+
+logo:
+  enable: true  ##display img
+  src: img/favicon.png ## 32 * 32px, logo img
+  apple_icon: img/apple-icon.png ## logo img for apple icon, 114 * 114 px
 
 #your personal page, could be your github account page, twitter or google plus personal page
 ## By default its your homepage

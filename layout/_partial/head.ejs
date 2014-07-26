@@ -47,7 +47,12 @@
     <meta http-equiv="Content-Language" content="zh-Hans"/>
   <% } %>
 
-  <link href="<%- config.root %>favicon.png" rel="icon">
+  <link href="<%- config.root %><%- theme.logo.src %>" rel="icon">
+  <% if (theme.logo.apple_icon){ %>
+    <link rel="apple-touch-icon" href="<%- config.root %><%- theme.logo.apple_icon %>">
+    <link rel="apple-touch-icon-precomposed" href="<%- config.root %><%- theme.logo.apple_icon %>">
+    <% } %>
+    
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
 
