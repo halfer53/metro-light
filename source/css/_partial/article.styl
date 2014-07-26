@@ -258,9 +258,9 @@ article
       font-size 1.5em
 
   footer
-    padding-bottom 40px
+    padding-bottom 30px
     margin-bottom 40px
-    border-bottom 1px solid color-border
+    border-bottom 2px solid #eee
     margin-top 25px
     color color-meta
     font-size 0.9em
@@ -273,30 +273,7 @@ article
 
     .share
       margin-top 30px
-    a
-      color color-meta
-      &:hover
-        color color-link
-        text-decoration none
-      &:before
-        font 1.1em font-icon
-        padding-right 10px
-        vertical-align middle
-
-      &.more-link
-        font-style italic
-        font-weight 600
-        color color-link
-        &:hover
-          opacity 0.6
-        i
-          margin-left 5px
-
-
-      &.comment-link
-        &:before
-          content '\f075'
-
+    
     .categories, .tags
       position relative
       padding-left 25px
@@ -304,6 +281,29 @@ article
       &:before
         position absolute
         font 1.1em font-icon
+      a
+        color color-meta
+        &:hover
+          color color-link
+          text-decoration none
+        &:before
+          font 1.1em font-icon
+          padding-right 10px
+          vertical-align middle
+
+        &.more-link
+          font-style italic
+          font-weight 600
+          color color-link
+          &:hover
+            opacity 0.6
+          i
+            margin-left 5px
+
+
+      &.comment-link
+        &:before
+          content '\f075'
 
     .categories
       &:before
@@ -317,7 +317,22 @@ article
         top 3px
         left 2px
 
-    .addthis
-      margin-top 15px
-      iframe
-        margin-top 0
+    .article-nav
+      margin-top 10px
+      border-top 1px solid #eee
+      padding-top 20px
+      .article-pre, .article-next
+        float left
+        width 48%
+        color #009CDC
+        font-weight normal
+        a:hover
+          color color-font
+          text-decoration none
+      .article-next
+        text-align right
+        float right
+
+
+
+
