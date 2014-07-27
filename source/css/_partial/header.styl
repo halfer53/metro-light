@@ -22,6 +22,8 @@
         margin-top 50px
       a
         font-family font-header
+        &:hover
+          color color-link
         @media screen and (max-width: 992px)
           color #000
 
@@ -34,6 +36,7 @@
         font-family font-header
   
   #main-nav
+    font-family font-title
     padding-top 8px
     letter-spacing 1px
     .toggle
@@ -58,27 +61,27 @@
         float left
         margin-right 30px
         height 30px
-        line-height 30px
         .rss-top
           color color-link
         a
           height 100%
+          line-height 30px
           display block
           font-size 16px
           font-weight 400
-          line-height 30px
-          border-bottom 1px solid transparent
           -webkit-box-sizing border-box
           -moz-box-sizing border-box 
           box-sizing border-box
           -webkit-transitionall 0.25s linear
           -moz-transition all 0.25s linear
           transition all 0.25s linear
-          &:hover, &:focus
-            box-shadow inset 0px -2px #009CDC
-            -webkit-box-shadow inset 0px -2px #009CDC
-            -moz-box-shadow inset 0px -2px #009CDC
-            color #fff
+          @media only screen and (min-width 992px)
+
+            line-height 20px
+            &:hover, &:focus
+              box-shadow inset 0px -2px #009CDC
+              -webkit-box-shadow inset 0px -2px #009CDC
+              -moz-box-shadow inset 0px -2px #009CDC
 
 #toggle, .toggle
   display none
@@ -113,19 +116,15 @@
     box-sizing: border-box 
 
   .menu > li > a:hover, .menu > li > a:focus
-    background #0090CB
+    background #ddd
 
-  
-  
   .toggle:after 
     content 'Main Menu'
     font-size 20px
     display block
     width 100%
     padding 10px 20px
-    background #0090CB
-    -webkit-border-radius 2px
-    border-radius 2px
+    background color-link
     font-size 12px
     color #FFFFFF
     -webkit-transition all 0.5s linear
@@ -154,7 +153,9 @@
   #toggle:checked ~ .menu  
     display: block 
     opacity: 1
-    margin-top 42px
+    position absolute
+    top 50px
+    left 0
   
 
 #page-heading-wrap
@@ -182,18 +183,16 @@
         display inline
         margin-right 15px
         margin-top 5px
+        font-weight 300
         @media screen and (max-width: 768px)
           display block
           font-size 13px
           line-height 1.6em
-        .heading-span
-          color #444
-          font-weight 400
         time
           color rgb(102, 102, 102)
         a
           text-decoration underline
           color #009CDC
           &:hover
-            opacity 0.6
+            color #000
 

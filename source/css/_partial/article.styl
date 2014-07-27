@@ -2,6 +2,10 @@ icon-size = 32px
 icon-gap = 25px
 
 article
+
+  a:hover
+    color #000
+    
   font-weight 300
   &.page
     padding-left 20px
@@ -71,7 +75,7 @@ article
         a
           color color-link
           &:hover
-            opacity 0.6
+            color #000
             text-decoration none
       ul
         margin-top 3px
@@ -94,11 +98,8 @@ article
             text-decoration underline
             color #009CDC
             &:hover
-              opacity 0.6
-    .entry
-      @media screen and (max-width: 541px) //max width for smart phone
-        height 200px
-        overflow hidden
+              color #000
+
   .gallery
     overflow hidden
     position relative
@@ -274,6 +275,16 @@ article
     .share
       margin-top 30px
     
+    .alignright
+      .more-link
+        font-style italic
+        font-weight 600
+        color color-link
+        &:hover
+          color #000
+          text-decoration none
+        i
+            margin-left 5px
     .categories, .tags
       position relative
       padding-left 25px
@@ -290,16 +301,6 @@ article
           font 1.1em font-icon
           padding-right 10px
           vertical-align middle
-
-        &.more-link
-          font-style italic
-          font-weight 600
-          color color-link
-          &:hover
-            opacity 0.6
-          i
-            margin-left 5px
-
 
       &.comment-link
         &:before
@@ -321,13 +322,13 @@ article
       margin-top 10px
       border-top 1px solid #eee
       padding-top 15px
-      .article-pre, .article-next
+      .article-prev, .article-next
         float left
         width 48%
         color #009CDC
         font-weight normal
         a:hover
-          color color-font
+          color #000
           text-decoration none
       .article-next
         text-align right
