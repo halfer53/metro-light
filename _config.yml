@@ -50,7 +50,7 @@ google_analytics:
 
 ##url of your rss
 ##it is highly recommanded to use rss plugins, https://github.com/hexojs/hexo-generator-feed
-rss: https://ffff.github.io/rss2.xml
+rss: ##e.g. https://ffff.github.io/rss2.xml
 
 #for Chinese users
 ChineseUser: false

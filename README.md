@@ -8,7 +8,7 @@ Metro-light is inspired by Win 8, Metro-Light a flat, minimal and responsive the
 ##Installation
 ###Install
 ```
-$ git clone https://github.com/halfer53/metro-light.git themes/metro-light
+git clone https://github.com/halfer53/metro-light.git themes/metro-light
 ```
 **Metro-light requires Hexo 2.4.5 and above.** 
 ###Enable
