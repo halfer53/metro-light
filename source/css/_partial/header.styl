@@ -88,6 +88,8 @@
 
 @media only screen and (max-width 992px)
   .menu
+    max-height 40%
+    overflow-y scroll
     background #FFFFFF
     display none 
     opacity: 0 
@@ -100,6 +102,8 @@
   
   .menu, .menu > li, .menu > li > a
     height auto
+    width 100%
+    overflow-x hidden
   
   .menu > li  
     text-align center
@@ -129,7 +133,6 @@
     color #FFFFFF
     -webkit-transition all 0.5s linear
     -moz-transition all 0.5s linear
-    -o-transition all 0.5s linear
     transition all 0.5s linear
     -webkit-box-sizing border-box
     -moz-box-sizing border-box

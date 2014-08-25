@@ -56,6 +56,14 @@
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
 
+  <% if(theme.ChineseUser) { %>
+  <!-- Chinese readability improment -->
+  <style type="text/css">
+    article {font-weight: 400;letter-spacing: .01rem;}
+    article .entry{line-height:2;}
+  </style>
+  <% } %>
+  
   <style type="text/css">
   /* Tim Pietrusky advanced checkbox hack (Android <= 4.1.2) */
 body{ -webkit-animation: bugfix infinite 1s; }
@@ -78,7 +86,7 @@ body{ -webkit-animation: bugfix infinite 1s; }
     <% if(theme.CustomFont) { %>
       <link href='http://fonts.useso.com/css?family=Open+Sans:300,400|Playball' rel='stylesheet' type='text/css'>
     <% } %>
-  <link href='http://apps.bdimg.com/libs/fontawesome/4.0.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+  <link href='http://apps.bdimg.com/libs/fontawesome/4.1.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
   <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
   <% } %>
 
