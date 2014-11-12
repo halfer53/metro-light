@@ -52,6 +52,10 @@ google_analytics:
 ##it is highly recommanded to use rss plugins, https://github.com/hexojs/hexo-generator-feed
 rss: ##e.g. https://ffff.github.io/rss2.xml
 
+##if false, the abstract for each article in homepage is in plain text, with a limitation of 800 characters. 
+##if true, the homepage will display the whole formatted article
+formatted_abstract: true
+
 #for Chinese users
 ChineseUser: false
 ##默认false. 如果你的访客大部分来自中国, 那么请设置为true, cdn将会调换为360和百度公共库, 同时lang和content-language也会被修改

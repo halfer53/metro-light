@@ -55,19 +55,21 @@
 
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
-
-  <% if(theme.ChineseUser) { %>
-  <!-- Chinese readability improment -->
-  <style type="text/css">
-    article {font-weight: 400;letter-spacing: .01rem;}
-    article .entry{line-height:2;}
-  </style>
-  <% } %>
   
   <style type="text/css">
   /* Tim Pietrusky advanced checkbox hack (Android <= 4.1.2) */
 body{ -webkit-animation: bugfix infinite 1s; }
 @-webkit-keyframes bugfix { from {padding:0;} to {padding:0;} }
+
+  <% if(theme.ChineseUser) { %>
+  <!-- Chinese readability improvements -->
+    article {font-weight: 400;letter-spacing: .01rem;}
+    article .entry{line-height:2;}
+  <% } %>
+
+  <% if(theme.formatted_abstract) { %>
+    article .entry{max-height: 550px; overflow:hidden;}
+  <% } %>
 </style>
 
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
