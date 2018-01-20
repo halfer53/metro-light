@@ -9,7 +9,7 @@
   <% } %>
       <% if (index) { %>
         <header>
-          <div class="icon"></div>
+          <!-- <div class="icon"></div> -->
           <%- partial('post/title') %>
           <ul>
             <li>
@@ -45,8 +45,10 @@
         <% if (index){ %>
           <% if (item.excerpt){ %>
             <%- item.excerpt %>
+          <% } else if (theme.formatted_abstract) { %>
+            <%- item.content %>
           <% } else { %>
-            <%= strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 800) %>
+            <%= strip_html(item.content).substring(0, 800) %>
           <% } %>
         <% } else { %>
           <%- item.content %>
