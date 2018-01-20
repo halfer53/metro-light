@@ -12,7 +12,7 @@ excerpt_link: Continue Reading
 
 comment:
   duoshuo: false
-  duoshuo_short_name: halfer53
+  duoshuo_short_name: 
 ## to enable disqus, you need to fill in the disqus_shortname in config.yml
 ## to enable duoshuo, you need duoshuo id and set duosuo to true
 
@@ -21,15 +21,15 @@ share:
   enable: true
   jiathis: false ##a chinese sharing plugins for chinese users
   twitter: true
-  google: true
+  google: true.
 
 bottom_link:
-  google_plus: ##e.g. https://plus.google.com/u/0/104684175089936429154/posts
-  github: halfer53 ##e.g.https://github.com/halfer53
-  twitter: halfer53 ##e.g.https://twitter.com/halfer53
-  weibo: ##e.g.http://www.weibo.com/2316853071
-  facebook: ##e.g.https://www.facebook.com/brucetansh
-  renren: ##e.g.http://www.renren.com/338011361
+  google_plus: ##e.g. 104684175089936429154 for https://plus.google.com/u/0/104684175089936429154/posts
+  github: ##e.g. ffff for https://github.com/ffff
+  twitter: ##e.g. ffff for https://twitter.com/ffff
+  weibo: ##e.g. ffff for http://www.weibo.com/2316853071
+  facebook: ##e.g. ffff for https://www.facebook.com/ffff
+  renren: ##e.g. 333333333 for http://www.renren.com/333333333
 
 logo:
   enable: true  ##display img
@@ -38,7 +38,7 @@ logo:
 
 #your personal page, could be your github account page, twitter or google plus personal page
 ## By default its your homepage
-personal_site: https://github.com/halfer53
+personal_site: 
 
 fancybox: false
 
@@ -46,11 +46,11 @@ fancybox: false
 CustomFont: true
 
 #google analytics id, e.g.UA-28532742-2
-google_analytics: UA-28532742-2
+google_analytics: 
 
 ##url of your rss
 ##it is highly recommanded to use rss plugins, https://github.com/hexojs/hexo-generator-feed
-rss: https://halfer53.github.io/atom.xml
+rss: ##e.g. https://ffff.github.io/rss2.xml
 
 ##if false, the abstract for each article in homepage is in plain text, with a limitation of 800 characters. 
 ##if true, the homepage will display the whole formatted article
