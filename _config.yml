@@ -13,6 +13,7 @@ excerpt_link: Continue Reading
 comment:
   duoshuo: false
   duoshuo_short_name: halfer53
+  share_this_script: //platform-api.sharethis.com/js/sharethis.js#property=5a651ecf25d2630013b09abb&product=inline-share-buttons
 ## to enable disqus, you need to fill in the disqus_shortname in config.yml
 ## to enable duoshuo, you need duoshuo id and set duosuo to true
 
@@ -20,6 +21,7 @@ comment:
 share:
   enable: true
   jiathis: false ##a chinese sharing plugins for chinese users
+  sharethis: false
   twitter: true
   google: true
 

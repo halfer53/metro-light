@@ -76,5 +76,8 @@ body{ -webkit-animation: bugfix infinite 1s; }
 
   <%- partial('google_analytics') %>
 
-
+  <% if (theme.share.sharethis) { %>
+    <script type="text/javascript" src=<%= theme.comment.share_this_script %>></script>
+  <% } %>
+  
 </head>

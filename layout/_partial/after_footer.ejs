@@ -1,7 +1,7 @@
 <% if(config.disqus_shortname && !theme.comment.duoshuo) { %>
 
 		<script type="text/javascript">
-		var disqus_shortname = '<%= config.disqus_shortname %>';
+				var disqus_shortname = '<%= config.disqus_shortname %>';
 
 		        (function() {
 		            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -11,28 +11,36 @@
 		</script>
 
 		<script type="text/javascript">
-		var disqus_shortname = '<%= config.disqus_shortname %>'; 
+				var disqus_shortname = '<%= config.disqus_shortname %>'; 
 
-		(function () {
-		var s = document.createElement('script'); s.async = true;
-		s.type = 'text/javascript';
-		s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-		}());
+				(function () {
+					var s = document.createElement('script'); s.async = true;
+					s.type = 'text/javascript';
+					s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+					(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+				}());
 		</script>
 
   <% } else if(theme.comment.duoshuo && theme.comment.duoshuo_short_name) { %>
 
- <script type="text/javascript">
-var duoshuoQuery = {short_name:"<%= theme.comment.duoshuo_short_name %>"};
-(function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = 'http://static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-})();
-</script>
+		<script type="text/javascript">
+		var duoshuoQuery = {short_name:"<%= theme.comment.duoshuo_short_name %>"};
+		(function() {
+			var ds = document.createElement('script');
+			ds.type = 'text/javascript';ds.async = true;
+			ds.src = 'http://static.duoshuo.com/embed.js';
+			ds.charset = 'UTF-8';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+		})();
+		</script>
+<% } %>
+
+<% if(!theme.ChineseUser) { %>
+<link href="//opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" rel="stylesheet">
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+<% } else {%>
+<link href='http://apps.bdimg.com/libs/fontawesome/4.1.0/css/font-awesome.css' rel='stylesheet' type='text/css'>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <% } %>
 
 
