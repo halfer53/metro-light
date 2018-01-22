@@ -1,12 +1,14 @@
 menu:
   Home: /
   Archives: /archives
+  About: /about
 
 widgets:
 - search
 - recent_posts
 - category
 - tag
+
 
 excerpt_link: Continue Reading
 

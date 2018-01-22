@@ -17,6 +17,12 @@ git clone https://github.com/halfer53/metro-light.git themes/metro-light
 
 Modify `theme` setting in blog folder`_config.yml` to `metro-light`.
 
+Then to enable the ```About``` page, enter
+
+```bash
+hexo new page 'about'
+```
+
 ### Update
 
 ```bash

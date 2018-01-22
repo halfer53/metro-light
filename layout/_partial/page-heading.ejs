@@ -32,6 +32,8 @@
               <% } %>
             </li>
           </ul>
+        <% } else if (page.path != 'index.html') { %>
+          <h2><%= page.path.split('/')[0].split(' ').map(w => w[0].toUpperCase() + w.substr(1).toLowerCase()).join(' ').split('.html')[0] %></h2>
         <% } else { %>
           <h2><% if (config.subtitle){ %><%= config.subtitle %><% } %></h2>
         <% } %>
