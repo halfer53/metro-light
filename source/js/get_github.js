@@ -3,8 +3,6 @@
 function getGithubStars(user, limit, callback){
 
     thresh = 1;
-    limit = 3;
-    user = 'halfer53';
 
     request('/users/' + user, function (res) {
         if (!res.public_repos) {
