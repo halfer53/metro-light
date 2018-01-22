@@ -66,7 +66,7 @@ function getGithubStars(user, limit, callback){
             url: url,
             data: JSON.stringify({"query":query,"variables":"{}"}),
             headers: {
-                Authorization: "Bearer de46cdf580508f5d147e3ce865872abde73da46d"
+                Authorization: "Bearer 3d652ae63e7dada6d856a38e6000584212a963ae"
               },
             contentType: "application/json",
             method: "POST",
