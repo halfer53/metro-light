@@ -2,37 +2,43 @@
 
 function getGithubStars(user, limit, callback){
 
-    thresh = 1;
+    var thresh = 1
+    var per_page = 100
+    var page = 1
+    var repos = []
+    var res_count = 0
 
-    request('/users/' + user, function (res) {
-        if (!res.public_repos) {
+    request( geturl(user, page) , handlecb)
+
+    function handlecb(res){
+        if (!res) {
             console.log(res.message)
             return
         }
-        var result = ''
-        var pages = Math.ceil(res.public_repos / 100),
-            i = pages,
-            repos = []
-        while (i--) {
-            request('/users/' + user + '/repos?per_page=100&page=' + (i + 1), function(res){
-                repos = repos.concat(res)
-                pages--
-                if (!pages){
-                    output(repos);
-                }
-            }.bind({result:result}))
+        res_count = res.length
+        repos = repos.concat(res)
+
+        if(res_count == per_page){
+            request(geturl( user, ++page), handlecb)
+        }else{
+            output(repos)
         }
-    })
+    }
+
+    function geturl(user, i){
+        return 'https://api.github.com' + '/users/' + user + '/repos?per_page=' + per_page + '&page=' + i.toString()
+    }
 
     function request (mypath, cb) {
         var body = ''
         var result = ''
-        url = 'https://api.github.com' + mypath
+        url =  mypath
+        console.log('request', url)
         $.when( $.ajax(url) ).then(function(data, textStatus, jqXHR){
-            // console.log(data)
+            console.log(data)
             cb(data)
         }, function(data, textStatus, jqXHR){
-            console.log('err', data)
+            console.log(textStatus, data)
         })
     }
     
@@ -56,7 +62,7 @@ function getGithubStars(user, limit, callback){
         if (list.length > limit) {
             list = list.slice(0, limit)
         }
-        // console.log(list)
+        console.log(list)
         
         // console.log(list)
         callback(list)
