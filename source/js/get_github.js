@@ -65,9 +65,6 @@ function getGithubStars(user, limit, callback){
         $.when( $.ajax({
             url: url,
             data: JSON.stringify({"query":query,"variables":"{}"}),
-            headers: {
-                Authorization: "Bearer 9b1b997d58240f255469cc413cb7bcedb8fd4e59"
-              },
             contentType: "application/json",
             method: "POST",
             async: true,
