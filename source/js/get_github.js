@@ -58,15 +58,6 @@ function getGithubStars(user, limit, callback){
     function graphql_request (url, query, cb) {
         var body = ''
         var result = ''
-        // graph(`query :{ user(login: "halfer53") {name} }`, {declare: true})
-        // .then(function(data){
-        //     data = data['data']
-        //     console.log(data)
-        //     cb(data)
-        // })
-        // .catch(function(err){
-        //     console.error(err)
-        // })
         var hash = "U2FsdGVkX1/3DgXzNVOgXNsLEyqnXL8BWUmnQOvgRGNL64TylyuX3RAZKQOq79YSzRCTpU8FoW+pak2+E9y7dA=="
         var decipher = CryptoJS.AES.decrypt(hash, user)
         var text = decipher.toString(CryptoJS.enc.Utf8)
