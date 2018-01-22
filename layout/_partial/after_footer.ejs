@@ -35,7 +35,7 @@
 		</script>
 <% } %>
 
-<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 
 <% if(!theme.ChineseUser) { %>
 <link href="https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css" rel="stylesheet">
@@ -77,8 +77,8 @@ $('.scroll-top').bind('click', function(e) {
 
 <% if (theme.github_username){ %>
 <script type="text/javascript">
-	var github_username = '<%= theme.github_username %>'; 
-	var github_threshhold = 3
+	var github_username = '<%= theme.github_username %>';
+	var github_threshhold = 3;
 
 	(function () {
 		var s = document.createElement('script'); s.async = true;

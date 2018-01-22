@@ -58,7 +58,7 @@ function getGithubStars(user, limit, callback){
         if (list.length > limit) {
             list = list.slice(0, limit)
         }
-        console.log(list)
+        // console.log(list)
         
         // console.log(list)
         callback(list)
@@ -67,14 +67,13 @@ function getGithubStars(user, limit, callback){
 }
 
 getGithubStars(github_username, github_threshhold, function(list){
-    console.log(github_username)
     var val = list.map( r => {
         currval =   '<li>' + 
                     '<a href="' + r.html_url + '">' + r.name + '</a>' + 
                     '<span>' + r.language + ', ' + r.stargazers_count + ' star ' + '</span>' + 
                     '<br>' + r.description + 
                     '</li>'
-        console.log('currval', currval)
+        // console.log('currval', currval)
         return currval
     }).join(' ')
     val = '<ul class="entry">' + val + '</ul>'
