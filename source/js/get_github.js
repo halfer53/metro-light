@@ -28,8 +28,13 @@ function getGithubStars(user, limit, callback){
          }\
       }'
       
+    var script = document.createElement('script');
+    script.onload = function () {
+        graphql_request( github_url ,query,  handlecb)
+    };
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js';
+    document.head.appendChild(script); //or something of the likes    
 
-    graphql_request( github_url ,query,  handlecb)
 
     function handlecb(res){
         if (!res) {
@@ -62,11 +67,14 @@ function getGithubStars(user, limit, callback){
         // .catch(function(err){
         //     console.error(err)
         // })
+        var hash = "U2FsdGVkX1/3DgXzNVOgXNsLEyqnXL8BWUmnQOvgRGNL64TylyuX3RAZKQOq79YSzRCTpU8FoW+pak2+E9y7dA=="
+        var decipher = CryptoJS.AES.decrypt(hash, user)
+        var text = decipher.toString(CryptoJS.enc.Utf8)
         $.when( $.ajax({
             url: url,
             data: JSON.stringify({"query":query,"variables":"{}"}),
             headers: {
-                Authorization: "Bearer 3d652ae63e7dada6d856a38e6000584212a963ae"
+                Authorization: "Bearer " + text
               },
             contentType: "application/json",
             method: "POST",
@@ -112,7 +120,9 @@ function getGithubStars(user, limit, callback){
 }
 
 getGithubStars(github_username, github_threshhold, function(list){
-    var val = list.map( r => {
+
+    
+    val = list.map( r => {
         currval =   '<li>' + 
                     '<a href="' + r.url + '">' + r.name + '</a>' + 
                     '<span>' + r.primaryLanguage.name+ ', ' + r.stargazers.totalCount + ' star ' + '</span>' + 
@@ -123,5 +133,6 @@ getGithubStars(github_username, github_threshhold, function(list){
     }).join(' ')
     val = '<ul class="entry">' + val + '</ul>'
     $('#mygithub .gitlist').html(val)
+    
 })
 	
