@@ -5,23 +5,30 @@ Metro-light is inspired by Win 8, Metro-Light a flat, minimal and responsive the
 
 [Demo](http://halfer53.github.io)
 
-##Installation
-###Install
-```
+## Installation
+
+### Install
+
+```bash
 git clone https://github.com/halfer53/metro-light.git themes/metro-light
 ```
-**Metro-light requires Hexo 2.4.5 and above.** 
-###Enable
-Modify `theme` setting in blog folder` _config.yml` to `metro-light`.
-###Update
-```
+
+### Enable
+
+Modify `theme` setting in blog folder`_config.yml` to `metro-light`.
+
+### Update
+
+```bash
 cd themes/metro-light
 git pull
 ```
-**please backup your `_config.yml` file before update.** 
-##Configuration
 
-```
+**please backup your `_config.yml` file before update.**
+
+## Configuration
+
+```yml
 menu:
   Home: /
   Archives: /archives
