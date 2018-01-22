@@ -65,6 +65,9 @@ function getGithubStars(user, limit, callback){
         $.when( $.ajax({
             url: url,
             data: JSON.stringify({"query":query,"variables":"{}"}),
+            headers: {
+                Authorization: "Bearer de46cdf580508f5d147e3ce865872abde73da46d"
+              },
             contentType: "application/json",
             method: "POST",
             async: true,
@@ -72,7 +75,7 @@ function getGithubStars(user, limit, callback){
         })).then(function(raw_data, textStatus, jqXHR){
             data = raw_data['data']
             if(!data){
-                error = data['errors'][0]
+                error = raw_data['errors'][0]
                 console.error(error.message)
             }
             cb(data)
