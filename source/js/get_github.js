@@ -79,7 +79,7 @@ function getGithubStars(user, limit, callback){
             }
             cb(data)
         }, function(data, textStatus, jqXHR){
-            console.log(textStatus, data)
+            console.error(textStatus, data)
         })
     }
     
