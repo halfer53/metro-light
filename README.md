@@ -3,7 +3,7 @@ metro-light
 
 Metro-light is inspired by Win 8, Metro-Light a flat, minimal and responsive theme for [Hexo](http://zespia.tw/hexo/), it is developed based on light
 
-[Demo](http://halfer53.github.io)
+[Demo](http://www.brucetansh.com/)
 
 ## Installation
 
